@@ -1,17 +1,15 @@
-#include "utils.h"
-#include "ganiInformation.h"
-#include "ganiParser.h"
-
 #include <iostream>
 #include <stdexcept>
 #include <string>
 #include <vector>
 
+#include "utils.h"
+#include "ganiInformation.h"
+#include "ganiParser.h"
 
 using namespace std;
 
 int main() {
-
   ifstream file = utils::openFile("walk.gani");
 
   vector<string> lines = utils::getGaniLines(file);
@@ -27,7 +25,6 @@ int main() {
   }
 
   cout << currentGani.defaultHead;
-
 
   return 0;
 }
