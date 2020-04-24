@@ -3,7 +3,7 @@
 #include "enums.h"
 #include "ganiParser.h"
 
-#include<iostream>
+#include <iostream>
 #include <vector>
 #include <string>
 #include <stdexcept>
