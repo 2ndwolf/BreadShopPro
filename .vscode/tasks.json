@@ -15,7 +15,7 @@
         "${workspaceFolder}\\BreadShopPro.exe"
       ],
       "options": {
-        "cwd": "C:\\MinGW\\bin"
+        "cwd": "C:\\MinGW\\bin\\"
       },
       "problemMatcher": [
         "$gcc"
