@@ -3,7 +3,6 @@
 #include "ganiParser.h"
 
 #include <iostream>
-#include <fstream>
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -21,7 +20,7 @@ int main() {
 
   GaniBuilding::GaniInformation currentGani;
 
-  if(lines[0].find("GANI") == 0){
+  if (lines[0].find("GANI") == 0) {
     currentGani = GaniParsing::parse(lines);
   } else {
     throw runtime_error("File type not supported");

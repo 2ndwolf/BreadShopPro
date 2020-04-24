@@ -8,11 +8,10 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(.)
 
 add_executable(${EXECUTABLE}
-		enums.h
-		ganiParser.cpp
-		ganiParser.h
-		ganiInformation.cpp
-		ganiInformation.h
-		main.cpp
-		utils.cpp
-		utils.h)
+        enums.h
+        ganiParser.cpp
+        ganiParser.h
+        ganiInformation.h
+        main.cpp
+        utils.cpp
+        utils.h)

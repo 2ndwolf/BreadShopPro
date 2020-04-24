@@ -21,13 +21,13 @@
 
 using namespace std;
 
-namespace utils{
-  vector<string> getGaniLines(ifstream& file);
+namespace utils {
+    vector<string> getGaniLines(ifstream &file);
 
-  ifstream openFile(string fileName);
+    ifstream openFile(string fileName);
 
-  vector<string> split(const string &text, char sep);
+    vector<string> split(const string &text, char sep);
 
-  string concatenateSpacedFileName(vector<string> &currentLine);
+    string concatenateSpacedFileName(vector<string> &currentLine);
 }
 #endif
