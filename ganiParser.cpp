@@ -36,9 +36,12 @@ namespace GaniParsing {
           for (int i = 7; i < splitLine.size(); i++) {
             spriteName += splitLine[i];
           }
-          currentGani->spriteDefs.push_back(SpriteDef(stoi(splitLine[1]), splitLine[2], stoi(splitLine[3]), stoi(splitLine[4]), stoi(splitLine[5]), stoi(splitLine[6]), spriteName));
+          currentGani->spriteDefs.push_back(
+                  SpriteDef(stoi(splitLine[1]), splitLine[2], stoi(splitLine[3]), stoi(splitLine[4]),
+                            stoi(splitLine[5]), stoi(splitLine[6]), spriteName));
         } else if (firstArgument == "ATTACHSPRITE") {
-          currentGani->attachedSprites.push_back(AttachedSprite(stoi(splitLine[1]), stoi(splitLine[2]), stoi(splitLine[3]), stoi(splitLine[4])));
+          currentGani->attachedSprites.push_back(
+                  AttachedSprite(stoi(splitLine[1]), stoi(splitLine[2]), stoi(splitLine[3]), stoi(splitLine[4])));
         } else if (firstArgument == "ANI") {
           isAni = true;
           direction, layer = 0;

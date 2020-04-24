@@ -24,8 +24,7 @@ namespace GaniBuilding {
 
       SpriteDef() = default;
 
-      SpriteDef(int pIndex, string pImage, int pOffX, int pOffY, int pWidth, int pHeight, string pName)
-              : index(pIndex), image(pImage), offX(pOffX), offY(pOffY), width(pWidth), height(pHeight), name(pName) {
+      SpriteDef(int pIndex, string pImage, int pOffX, int pOffY, int pWidth, int pHeight, string pName) : index(pIndex), image(pImage), offX(pOffX), offY(pOffY), width(pWidth), height(pHeight), name(pName) {
         if (pImage == "SPRITES") {
           defaultImage = SPRITES;
         } else if (pImage == "SHIELD") {
@@ -90,7 +89,6 @@ namespace GaniBuilding {
       vector<Sound> sounds;
 
       AniFrame() = default;
-
   };
 
   class AttachedSprite {
