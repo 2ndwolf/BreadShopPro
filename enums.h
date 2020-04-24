@@ -4,15 +4,14 @@
 #define _enums_h_
 
 namespace GaniBuilding {
-
-  enum Property{
+  enum Property {
     CONTINUOUS,
     LOOP,
     SINGLEDIRECTION,
     SETBACKTO
   };
 
-  enum DefaultImageType{
+  enum DefaultImageType {
     NOTDEFAULT,
     SPRITES,
     SHIELD,
@@ -28,12 +27,11 @@ namespace GaniBuilding {
     PARAM3
   };
 
-  enum Directions{
+  enum Directions {
     UP,
     LEFT,
     DOWN,
     RIGHT
   };
-
 }
 #endif
