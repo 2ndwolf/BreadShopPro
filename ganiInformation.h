@@ -55,7 +55,7 @@ namespace GaniBuilding {
       Directions direction;
       vector<AniSprite> aniSprites;
 
-      AniDir(){}
+      AniDir();
 
       AniDir(Directions pDirection);
   };

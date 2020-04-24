@@ -19,7 +19,7 @@ namespace GaniParsing {
 
     GaniInformation* currentGani = new GaniInformation();
 
-    for(string& line : lines){
+    for(string line : lines){
 
 
 
@@ -37,7 +37,9 @@ namespace GaniParsing {
         
         string firstArgument = splitLine[0];
 
+
         if(firstArgument == "SPRITE"){
+          cout << splitLine[1];
           string spriteName;
           for(int i = 7; i < splitLine.size(); i++){
             spriteName += splitLine[i];
@@ -63,7 +65,7 @@ namespace GaniParsing {
         
         // If not ANI or SPRITE and isAni is false, then it is a Property
         } else {
-          if(firstArgument == "LOOP"){
+          if(firstArgument.find("LOOP") == 0){
             currentGani -> properties.push_back(Property::LOOP);
             cout << "HALLO";
 

@@ -27,7 +27,7 @@ int main() {
     throw runtime_error("File type not supported");
   }
 
-  cout << currentGani.defaultHead;
+  cout << "HAI";
 
 
   return 0;
