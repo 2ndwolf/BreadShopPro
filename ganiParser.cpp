@@ -34,7 +34,7 @@ namespace GaniParsing {
       if(!isAni){
         vector<string> splitLine = utils::split(line, ' ');
 
-        
+
         string firstArgument = splitLine[0];
 
         if(firstArgument == "SPRITE"){
@@ -60,7 +60,7 @@ namespace GaniParsing {
           isAni = true;
           direction, layer = 0;
           continue;
-        
+
         // If not ANI or SPRITE and isAni is false, then it is a Property
         } else {
           if(firstArgument == "LOOP"){
@@ -80,7 +80,7 @@ namespace GaniParsing {
 
           // If none of the above, then it is a default
           } else {
-            
+
             // ADD DEFAULTS
             if(firstArgument.find("DEFAULT") == 0){
 
@@ -116,7 +116,7 @@ namespace GaniParsing {
 
       // If we're parsing the animation
       } else {
-        
+
         // If we meet ANIEND, it's over.
         if(line.find("ANIEND") == 0){
           break;

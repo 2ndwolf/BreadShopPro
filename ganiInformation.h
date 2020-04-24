@@ -8,7 +8,6 @@
 #include <vector>
 #include <string>
 
-
 using namespace std;
 
 
@@ -33,7 +32,7 @@ namespace GaniBuilding {
   class Sound{
     public:
       string fileName;
-      int x, y;
+      int x{}, y{};
 
       Sound();
 
@@ -42,7 +41,7 @@ namespace GaniBuilding {
 
   class AniSprite{
     public:
-      int spriteIndex, x, y , layer;
+      int spriteIndex{}, x{}, y{} , layer{};
 
     AniSprite();
 
@@ -55,7 +54,7 @@ namespace GaniBuilding {
       Directions direction;
       vector<AniSprite> aniSprites;
 
-      AniDir(){}
+      AniDir() = default;
 
       AniDir(Directions pDirection);
   };
@@ -63,7 +62,7 @@ namespace GaniBuilding {
   class AniFrame {
     public:
       vector<AniDir> aniDirs;
-      int wait;
+      int wait{};
       vector<Sound> sounds;
 
       AniFrame();
@@ -72,7 +71,7 @@ namespace GaniBuilding {
 
   class AttachedSprite{
     public:
-      int spriteA, spriteB, relX, relY;
+      int spriteA{}, spriteB{}, relX{}, relY{};
 
       AttachedSprite();
 
