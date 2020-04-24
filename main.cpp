@@ -2,8 +2,8 @@
 #include "ganiInformation.h"
 #include "ganiParser.h"
 
-#include<iostream>
-#include<fstream>
+#include <iostream>
+#include <fstream>
 #include <stdexcept>
 #include <string>
 #include <vector>
