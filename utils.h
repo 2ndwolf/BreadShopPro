@@ -14,15 +14,15 @@
 
 //=================================
 // included dependencies
-#include<fstream>
+#include <fstream>
 #include <vector>
 #include <stdexcept>
 #include <string>
 
 using namespace std;
 
-namespace utils{
-  vector<string> getGaniLines(ifstream& file);
+namespace utils {
+  vector<string> getGaniLines(ifstream &file);
 
   ifstream openFile(string fileName);
 
