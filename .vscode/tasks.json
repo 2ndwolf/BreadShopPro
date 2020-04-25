@@ -8,8 +8,8 @@
       "args": [
         "-g",
         "${workspaceFolder}\\utils.cpp",
-        "${workspaceFolder}\\ganiInformation.cpp",
         "${workspaceFolder}\\ganiParser.cpp",
+        "${workspaceFolder}\\saveBSP.cpp",
         "${workspaceFolder}\\main.cpp",
         "-o",
         "${workspaceFolder}\\BreadShopPro.exe"

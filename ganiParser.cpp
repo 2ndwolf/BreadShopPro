@@ -21,10 +21,6 @@ namespace GaniParsing {
       // line.erase(remove(line.begin(), line.end(), '\n'), line.end());
       // line.erase(remove(line.begin(), line.end(), '\r'), line.end());
 
-      // does nothing...
-      if (line.empty()) {
-        continue;
-      }
 
       if (!isAni) {
         vector<string> splitLine = utils::split(line, ' ');
@@ -33,10 +29,11 @@ namespace GaniParsing {
 
 
         if(firstArgument == "SPRITE"){
-          cout << splitLine[1];
           string spriteName;
           for (int i = 7; i < splitLine.size(); i++) {
-            // Add spaces
+            if(i != 7){
+              spriteName += " ";
+            }
             spriteName += splitLine[i];
           }
           currentGani->spriteDefs.push_back(
@@ -52,9 +49,8 @@ namespace GaniParsing {
 
           // If not ANI or SPRITE and isAni is false, then it is a Property
         } else {
-          if(firstArgument.find("LOOP") == 0){
+          if(firstArgument == "LOOP"){
             currentGani->properties.push_back(Property::LOOP);
-            cout << "HALLO";
           } else if (firstArgument == "CONTINUOUS") {
             currentGani->properties.push_back(Property::CONTINUOUS);
           } else if (firstArgument == "SETBACKTO") {
@@ -84,13 +80,16 @@ namespace GaniParsing {
                 splitLine.erase(splitLine.begin());
                 currentGani->defaultBody = utils::concatenateSpacedFileName(splitLine);
 
+              } else if (firstArgument.find("DEFAULTPARAM") == 0){
+                splitLine.erase(splitLine.begin());
+                currentGani->defaultParameters.push_back(
+                        utils::concatenateSpacedFileName(splitLine)
+                );
               }
 
-              // If it's neither a SPRITE, property or DEFAULT,
+              // If it's neither a SPRITE, ATTACHEDSPRITE, property or DEFAULT,
               // and is not part of the animation, then it is an
               // unrecognized property
-
-              // There is also an ATTACHSPRITE property, dunno what it does
             } else {
               // throw runtime_error("Invalid property name");
 
@@ -113,7 +112,7 @@ namespace GaniParsing {
 
         // 4 lines stuck together are to mean 4 directional
         // If a line is empty, a new frame starts
-        if (line == "") {
+        if (line.empty()) {
           direction = 0;
           continue;
 
@@ -127,16 +126,13 @@ namespace GaniParsing {
           splitLine.erase(splitLine.begin());
 
           // x and y are the two last arguments
-          int y = stoi(splitLine.back());
+          double y = stod(splitLine.back());
           splitLine.pop_back();
-          int x = stoi(splitLine.back());
+          double x = stod(splitLine.back());
           splitLine.pop_back();
 
           // All that's left should be the filename
-          string fileName;
-          for (string &namePart : splitLine) {
-            fileName += namePart;
-          }
+          string fileName = utils::concatenateSpacedFileName(splitLine);
 
           currentFrame.sounds.push_back(Sound(fileName, x, y));
 

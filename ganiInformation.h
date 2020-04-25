@@ -107,6 +107,7 @@ namespace GaniBuilding {
       vector<Property> properties;
       vector<AttachedSprite> attachedSprites;
       vector<string> defaultAttributes;
+      vector<string> defaultParameters;
       string defaultHead;
       string defaultBody;
       string nextGani = "none";
