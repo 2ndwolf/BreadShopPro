@@ -5,7 +5,7 @@ using namespace GaniBuilding;
 
 namespace Saving {
 
-  void save(GaniInformation aniInfo, const string& fileName, const string& as){
+  void save(GaniInformation aniInfo, CString fileName, CString as){
 
     CString fileLines;
 
@@ -103,7 +103,7 @@ namespace Saving {
 
     fileLines.write(CString("ANIEND") << '\n');
 
-    fileLines.save(fileName + "." + as);
+    fileLines.save(CString() << fileName << "." << as);
 
     fileLines.clear();
   }
