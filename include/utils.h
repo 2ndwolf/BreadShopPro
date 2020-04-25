@@ -28,6 +28,6 @@ namespace utils {
 
   vector<string> split(const string &text, char sep);
 
-  string concatenateSpacedFileName(vector<string> &currentLine);
+  string concatenateSpacedFileName(vector<CString> currentLine);
 }
 #endif

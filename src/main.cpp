@@ -2,6 +2,7 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include <CString.h>
 
 #include "utils.h"
 #include "ganiInformation.h"
@@ -11,15 +12,12 @@
 using namespace std;
 
 int main() {
-  ifstream file = utils::openFile("assets/yay.gani");
-
-  vector<string> lines = utils::getGaniLines(file);
-
-  file.close();
+  CString lines;
+  lines.load("assets/yay.gani");
 
   GaniBuilding::GaniInformation currentAni;
 
-  if (lines[0].find("GANI") == 0 || lines[0].find("SPRITE") == 0 ) {
+  if (lines.find("GANI") == 0 || lines.find("SPRITE") == 0 ) {
     currentAni = GaniParsing::parse(lines);
   } else {
     throw runtime_error("File type not supported");

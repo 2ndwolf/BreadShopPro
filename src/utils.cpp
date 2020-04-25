@@ -2,6 +2,7 @@
 #include <vector>
 #include <stdexcept>
 #include <string>
+#include <CString.h>
 
 #include "utils.h"
 
@@ -48,14 +49,14 @@ namespace utils {
     return tokens;
   }
 
-  string concatenateSpacedFileName(vector<string> &currentLine) {
-    string fileName;
+  string concatenateSpacedFileName(vector<CString> currentLine) {
+    CString fileName;
     for (int i = 0; i < currentLine.size(); i++) {
       if (i > 0) {
-        fileName += " ";
+        fileName << " ";
       }
-      fileName += currentLine[i];
+      fileName << currentLine[i];
     }
-    return fileName;
+    return fileName.text();
   }
 }

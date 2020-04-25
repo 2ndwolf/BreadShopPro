@@ -79,7 +79,7 @@ namespace Saving {
     fileLines.write(CString("ANI")<< '\n');
 
     for(const AniFrame& frame : aniInfo.aniFrames){
-      for(const AniDir& dir : frame.aniDirs){
+      for(auto & dir : frame.aniDirs){
         CString dirLine;
         for(AniSprite sprite : dir.aniSprites){
           dirLine << to_string(sprite.spriteIndex) + " " + to_string(sprite.x) + " " + to_string(sprite.y) + ", ";

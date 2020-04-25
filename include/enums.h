@@ -34,4 +34,8 @@ namespace GaniBuilding {
     RIGHT
   };
 }
+
+namespace BSPBuilding {
+
+}
 #endif
