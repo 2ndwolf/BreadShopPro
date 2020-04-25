@@ -55,12 +55,12 @@ namespace GaniBuilding {
 
   class Sound {
     public:
-      string fileName;
+      CString fileName;
       int x{}, y{};
 
       Sound() = default;
 
-      Sound(string &pFileName, double pX, double pY) : fileName(pFileName), x(static_cast<int>(pX * 16)), y(static_cast<int>(pY * 16)) {};
+      Sound(CString pFileName, double pX, double pY) : fileName(pFileName), x(static_cast<int>(pX * 16)), y(static_cast<int>(pY * 16)) {};
   };
 
   class AniSprite {
@@ -106,11 +106,11 @@ namespace GaniBuilding {
       vector<AniFrame> aniFrames;
       vector<Property> properties;
       vector<AttachedSprite> attachedSprites;
-      vector<string> defaultAttributes;
-      vector<string> defaultParameters;
-      string defaultHead;
-      string defaultBody;
-      string nextGani = "none";
+      vector<CString> defaultAttributes;
+      vector<CString> defaultParameters;
+      CString defaultHead;
+      CString defaultBody;
+      CString nextGani = "none";
 
       GaniInformation() = default;
   };

@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 #include <string>
 #include <CString.h>
@@ -22,7 +21,7 @@ namespace GaniParsing {
     vector<CString> strList = lines.tokenize('\n', true);
 
     for (CString &line : strList) {
-      
+
       if (!isAni) {
         vector<CString> splitLine = line.tokenize(" ");
 
@@ -132,7 +131,7 @@ namespace GaniParsing {
           splitLine.pop_back();
 
           // All that's left should be the filename
-          string fileName = utils::concatenateSpacedFileName(splitLine);
+          CString fileName = utils::concatenateSpacedFileName(splitLine);
 
           currentFrame.sounds.push_back(Sound(fileName, x, y));
 

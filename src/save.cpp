@@ -1,6 +1,4 @@
-#include <CString.h>
-
-#include "ganiInformation.h"
+#include "save.h"
 
 using namespace std;
 using namespace GaniBuilding;

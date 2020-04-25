@@ -1,10 +1,7 @@
 #include <iostream>
 #include <stdexcept>
-#include <string>
-#include <vector>
 #include <CString.h>
 
-#include "utils.h"
 #include "ganiInformation.h"
 #include "ganiParser.h"
 #include "save.h"

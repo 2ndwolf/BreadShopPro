@@ -2,7 +2,7 @@
 // include guard
 #ifndef _save_h_
 #define _save_h_
-
+#include <CString.h>
 
 #include "ganiInformation.h"
 
