@@ -1,5 +1,6 @@
-*.exe
-assets/*
-*.dll
-*.bs
-*.bsp
+bin/*.exe
+bin/*
+lib/
+bin/*.bs
+bin/*.bsp
+cmake-*/

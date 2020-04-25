@@ -11,7 +11,7 @@ using namespace GaniBuilding;
 
 namespace Saving {
 
-  void save(GaniInformation aniInfo, string fileName, string as);
+  void save(GaniInformation aniInfo, const string& fileName, const string& as);
 
 }
 #endif
