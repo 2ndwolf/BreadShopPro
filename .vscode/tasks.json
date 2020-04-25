@@ -4,18 +4,18 @@
     {
       "type": "shell",
       "label": "g++.exe build active file",
-      "command": "C:\\MinGW\\bin\\g++.exe",
+      "command": "C:\\MinGW\\mingw64\\bin\\g++.exe",
       "args": [
         "-g",
         "${workspaceFolder}\\utils.cpp",
         "${workspaceFolder}\\ganiParser.cpp",
-        "${workspaceFolder}\\saveBSP.cpp",
+        "${workspaceFolder}\\save.cpp",
         "${workspaceFolder}\\main.cpp",
         "-o",
         "${workspaceFolder}\\BreadShopPro.exe"
       ],
       "options": {
-        "cwd": "C:\\MinGW\\bin\\"
+        "cwd": "C:\\MinGW\\mingw64\\bin\\"
       },
       "problemMatcher": [
         "$gcc"

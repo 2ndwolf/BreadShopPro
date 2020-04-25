@@ -12,8 +12,8 @@ add_executable(${EXECUTABLE}
         ganiParser.cpp
         ganiParser.h
         ganiInformation.h
-        saveBSP.cpp
-        saveBSP.h
+        save.cpp
+        save.h
         main.cpp
         utils.cpp
         utils.h)
