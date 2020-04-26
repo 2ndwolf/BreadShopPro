@@ -4,7 +4,7 @@
     {
       "type": "shell",
       "label": "g++.exe build active file",
-      "command": "C:\\MinGW\\mingw64\\bin\\g++.exe",
+      "command": "C:\\MinGW\\bin\\g++.exe",
       "args": [
         "-g",
         "${workspaceFolder}\\utils.cpp",
@@ -12,10 +12,10 @@
         "${workspaceFolder}\\save.cpp",
         "${workspaceFolder}\\main.cpp",
         "-o",
-        "${workspaceFolder}\\BreadShopPro.exe"
+        "${workspaceFolder}\\BreadShopPro.exe",
       ],
       "options": {
-        "cwd": "C:\\MinGW\\mingw64\\bin\\"
+        "cwd": "C:\\MinGW\\bin\\"
       },
       "problemMatcher": [
         "$gcc"

@@ -17,14 +17,14 @@ namespace GaniBuilding {
     SHIELD,
     HEAD,
     BODY,
-    ATTR1,
-    ATTR2,
-    ATTR3,
     SWORD,
     HORSE,
     PARAM1,
+    ATTR1,
     PARAM2,
-    PARAM3
+    ATTR2,
+    PARAM3,
+    ATTR3
   };
 
   enum Directions {
@@ -32,6 +32,16 @@ namespace GaniBuilding {
     LEFT,
     DOWN,
     RIGHT
+  };
+
+}
+
+namespace Enumerators {
+  enum FileTypes {
+    GANI,//Old file format
+    BS,  //Restructured Gani
+    BSP, //Encrypted BS file with bundled images
+    SBSP //BSP file without images
   };
 }
 #endif
