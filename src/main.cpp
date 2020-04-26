@@ -20,7 +20,7 @@ int main() {
     throw runtime_error("File type not supported");
   }
 
-  Saving::save(currentAni, "test", "bs");
+  Saving::save(currentAni, "test", "bytes");
 
   cout << "HAI";
 
