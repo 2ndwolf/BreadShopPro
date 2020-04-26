@@ -9,10 +9,10 @@
         "-g",
         "${workspaceFolder}\\utils.cpp",
         "${workspaceFolder}\\ganiParser.cpp",
-        "${workspaceFolder}\\saveBSP.cpp",
+        "${workspaceFolder}\\save.cpp",
         "${workspaceFolder}\\main.cpp",
         "-o",
-        "${workspaceFolder}\\BreadShopPro.exe"
+        "${workspaceFolder}\\BreadShopPro.exe",
       ],
       "options": {
         "cwd": "C:\\MinGW\\bin\\"

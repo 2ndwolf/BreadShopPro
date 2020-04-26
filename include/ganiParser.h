@@ -7,13 +7,11 @@
 #include <string>
 #include <stdexcept>
 
-#include "ganiInformation.h"
+#include "src/components/ganiInformation.h"
 
-using namespace std;
-using namespace GaniBuilding;
 
 namespace GaniParsing {
-  GaniInformation parse(vector<string> lines);
+  GaniBuilding::cGaniInformation parse(std::vector<std::string> lines);
 }
 
 #endif

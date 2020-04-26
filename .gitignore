@@ -1,5 +1,11 @@
 *.exe
 assets/*
-*.dll
 *.bs
 *.bsp
+CMakeFiles/*
+build[s]/*
+dependencies/*
+google/*
+howtos/*
+.vscode
+v01/*
