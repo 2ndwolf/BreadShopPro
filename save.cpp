@@ -1,19 +1,15 @@
-
 #include <fstream>
 #include <vector>
 #include <cstring>
-#include <string>
 
-#include "src/components/ganiInformation.h"
-// #include "save.h"
+#include "ganiInformation.h"
 
 using namespace std;
 using namespace GaniBuilding;
 
 namespace Saving {
 
-  void ganiToBS(cGaniInformation aniInfo, string fileName, string as){
-    
+  void save(GaniInformation aniInfo, string fileName, string as){
     ofstream outFile(fileName + "." + as, ios::out);
 
     vector<string> fileLines;
@@ -120,7 +116,6 @@ namespace Saving {
 
     outFile.close();
     fileLines.clear();
-
   }
 
 }

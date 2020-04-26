@@ -6,23 +6,25 @@
 #include <vector>
 #include <string>
 
-#include "include/enums.h"
+#include "enums.h"
+
+using namespace std;
 
 namespace GaniBuilding {
   class SpriteDef {
     public:
       int index{};
-      std::string image;
+      string image;
       int offX{};
       int offY{};
       int width{};
       int height{};
-      std::string name;
+      string name;
       DefaultImageType defaultImage = NOTDEFAULT;
 
       SpriteDef() = default;
 
-      SpriteDef(int pIndex, std::string pImage, int pOffX, int pOffY, int pWidth, int pHeight, std::string pName) : index(pIndex), image(pImage), offX(pOffX), offY(pOffY), width(pWidth), height(pHeight), name(pName) {
+      SpriteDef(int pIndex, string pImage, int pOffX, int pOffY, int pWidth, int pHeight, string pName) : index(pIndex), image(pImage), offX(pOffX), offY(pOffY), width(pWidth), height(pHeight), name(pName) {
         if (pImage == "SPRITES") {
           defaultImage = SPRITES;
         } else if (pImage == "SHIELD") {
@@ -53,12 +55,12 @@ namespace GaniBuilding {
 
   class Sound {
     public:
-      std::string fileName;
+      string fileName;
       int x{}, y{};
 
       Sound() = default;
 
-      Sound(std::string &pFileName, double pX, double pY) : fileName(pFileName), x(static_cast<int>(pX * 16)), y(static_cast<int>(pY * 16)) {};
+      Sound(string &pFileName, double pX, double pY) : fileName(pFileName), x(static_cast<int>(pX * 16)), y(static_cast<int>(pY * 16)) {};
   };
 
   class AniSprite {
@@ -73,7 +75,7 @@ namespace GaniBuilding {
   class AniDir {
     public:
       Directions direction{};
-      std::vector<AniSprite> aniSprites;
+      vector<AniSprite> aniSprites;
 
       AniDir() = default;
 
@@ -82,9 +84,9 @@ namespace GaniBuilding {
 
   class AniFrame {
     public:
-      std::vector<AniDir> aniDirs;
+      vector<AniDir> aniDirs;
       int wait{};
-      std::vector<Sound> sounds;
+      vector<Sound> sounds;
 
       AniFrame() = default;
   };
@@ -98,19 +100,19 @@ namespace GaniBuilding {
       AttachedSprite(int pSpriteA, int pSpriteB, int pRelX, int pRelY) : spriteA(pSpriteA), spriteB(pSpriteB), relX(pRelX), relY(pRelY) {};
   };
 
-  class cGaniInformation {
+  class GaniInformation {
     public:
-      std::vector<SpriteDef> spriteDefs;
-      std::vector<AniFrame> aniFrames;
-      std::vector<Property> properties;
-      std::vector<AttachedSprite> attachedSprites;
-      std::vector<std::string> defaultAttributes;
-      std::vector<std::string> defaultParameters;
-      std::string defaultHead;
-      std::string defaultBody;
-      std::string nextGani = "none";
+      vector<SpriteDef> spriteDefs;
+      vector<AniFrame> aniFrames;
+      vector<Property> properties;
+      vector<AttachedSprite> attachedSprites;
+      vector<string> defaultAttributes;
+      vector<string> defaultParameters;
+      string defaultHead;
+      string defaultBody;
+      string nextGani = "none";
 
-      cGaniInformation() = default;
+      GaniInformation() = default;
   };
 }
 #endif
