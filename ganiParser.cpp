@@ -2,20 +2,20 @@
 #include <vector>
 #include <string>
 
-#include "src/components/ganiInformation.h"
-#include "include/utils.h"
-#include "include/enums.h"
-#include "include/ganiParser.h"
+#include "ganiInformation.h"
+#include "utils.h"
+#include "enums.h"
+#include "ganiParser.h"
 
 using namespace std;
 using namespace GaniBuilding;
 
 namespace GaniParsing {
-  cGaniInformation parse(vector<string> lines) {
+  GaniInformation parse(vector<string> lines) {
     bool isAni = false;
     int layer, direction;
 
-    cGaniInformation *currentGani = new cGaniInformation();
+    GaniInformation *currentGani = new GaniInformation();
 
     for (string &line : lines) {
       // line.erase(remove(line.begin(), line.end(), '\n'), line.end());
