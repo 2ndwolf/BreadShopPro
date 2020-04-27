@@ -6,6 +6,7 @@
 
 #include "components/ganiInformation.h"
 #include "include/ganiToBS.h"
+#include "include/ganiToServerBSP.h"
 #include "include/save.h"
 
 using namespace std;
@@ -17,7 +18,7 @@ namespace Saving {
     if(as == "bs"){
       ganiToBS(aniInfo, fileName, as);
     } else if(as == "serverbsp"){
-      // ganiToServerBSP();
+      ganiToServerBSP(aniInfo, fileName, as);
     }
   }
 

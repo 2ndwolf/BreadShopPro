@@ -10,8 +10,8 @@
 #include "src/components/ganiInformation.h"
 
 
-namespace GaniParsing {
-  GaniBuilding::cGaniInformation parse(std::vector<std::string> lines);
+namespace Parsing {
+  GaniBuilding::cGaniInformation parseGani(std::vector<std::string> lines);
 }
 
 #endif
