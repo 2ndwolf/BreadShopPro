@@ -34,4 +34,22 @@ namespace GaniBuilding {
     RIGHT
   };
 }
+
+namespace BSPBuilding {
+
+    enum OpCode {
+        ANI,
+        ANIEND,
+        PROPS,
+        PROPSEND,
+        PARAMETERS,
+        PARAMETERSEND,
+        ATTRIBUTES,
+        ATTRIBUTESEND,
+        STRING,
+        SPRITE,
+        ATTACHSPRITE
+    };
+
+}
 #endif

@@ -14,20 +14,13 @@
 
 //=================================
 // included dependencies
-#include <fstream>
 #include <vector>
 #include <stdexcept>
-#include <string>
+#include <CString.h>
 
 using namespace std;
 
 namespace utils {
-  vector<string> getGaniLines(ifstream &file);
-
-  ifstream openFile(string fileName);
-
-  vector<string> split(const string &text, char sep);
-
-  string concatenateSpacedFileName(vector<string> &currentLine);
+  CString concatenateSpacedFileName(vector<CString> currentLine);
 }
 #endif

@@ -14,17 +14,17 @@ namespace GaniBuilding {
   class SpriteDef {
     public:
       int index{};
-      string image;
+      CString image;
       int offX{};
       int offY{};
       int width{};
       int height{};
-      string name;
+      CString name;
       DefaultImageType defaultImage = NOTDEFAULT;
 
       SpriteDef() = default;
 
-      SpriteDef(int pIndex, string pImage, int pOffX, int pOffY, int pWidth, int pHeight, string pName) : index(pIndex), image(pImage), offX(pOffX), offY(pOffY), width(pWidth), height(pHeight), name(pName) {
+      SpriteDef(int pIndex, CString pImage, int pOffX, int pOffY, int pWidth, int pHeight, CString pName) : index(pIndex), image(pImage), offX(pOffX), offY(pOffY), width(pWidth), height(pHeight), name(pName) {
         if (pImage == "SPRITES") {
           defaultImage = SPRITES;
         } else if (pImage == "SHIELD") {
@@ -55,12 +55,12 @@ namespace GaniBuilding {
 
   class Sound {
     public:
-      string fileName;
+      CString fileName;
       int x{}, y{};
 
       Sound() = default;
 
-      Sound(string &pFileName, double pX, double pY) : fileName(pFileName), x(static_cast<int>(pX * 16)), y(static_cast<int>(pY * 16)) {};
+      Sound(CString pFileName, double pX, double pY) : fileName(pFileName), x(static_cast<int>(pX * 16)), y(static_cast<int>(pY * 16)) {};
   };
 
   class AniSprite {
@@ -106,11 +106,11 @@ namespace GaniBuilding {
       vector<AniFrame> aniFrames;
       vector<Property> properties;
       vector<AttachedSprite> attachedSprites;
-      vector<string> defaultAttributes;
-      vector<string> defaultParameters;
-      string defaultHead;
-      string defaultBody;
-      string nextGani = "none";
+      vector<CString> defaultAttributes;
+      vector<CString> defaultParameters;
+      CString defaultHead;
+      CString defaultBody;
+      CString nextGani = "none";
 
       GaniInformation() = default;
   };

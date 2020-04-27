@@ -13,7 +13,7 @@ using namespace std;
 using namespace GaniBuilding;
 
 namespace GaniParsing {
-  GaniInformation parse(vector<string> lines);
+  GaniInformation parse(CString lines);
 }
 
 #endif

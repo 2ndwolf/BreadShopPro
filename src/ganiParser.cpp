@@ -1,6 +1,6 @@
-#include <iostream>
 #include <vector>
 #include <string>
+#include <CString.h>
 
 #include "ganiInformation.h"
 #include "utils.h"
@@ -11,40 +11,39 @@ using namespace std;
 using namespace GaniBuilding;
 
 namespace GaniParsing {
-  GaniInformation parse(vector<string> lines) {
+  GaniInformation parse(CString lines) {
     bool isAni = false;
     int layer, direction;
 
-    GaniInformation *currentGani = new GaniInformation();
+    auto *currentGani = new GaniInformation();
 
-    for (string &line : lines) {
-      // line.erase(remove(line.begin(), line.end(), '\n'), line.end());
-      // line.erase(remove(line.begin(), line.end(), '\r'), line.end());
+    lines.removeAllI("\r");
+    vector<CString> strList = lines.tokenize('\n', true);
 
+    for (CString &line : strList) {
 
       if (!isAni) {
-        vector<string> splitLine = utils::split(line, ' ');
+        vector<CString> splitLine = line.tokenize(" ");
 
-        string firstArgument = splitLine[0];
+        CString firstArgument = (!splitLine.empty())? splitLine[0] : "";
 
-
-        if(firstArgument == "SPRITE"){
-          string spriteName;
+        if(firstArgument == "SPRITE") {
+          CString spriteName;
           for (int i = 7; i < splitLine.size(); i++) {
             if(i != 7){
-              spriteName += " ";
+              spriteName << ' ';
             }
-            spriteName += splitLine[i];
+            spriteName << splitLine[i];
           }
           currentGani->spriteDefs.push_back(
-                  SpriteDef(stoi(splitLine[1]), splitLine[2], stoi(splitLine[3]), stoi(splitLine[4]),
-                            stoi(splitLine[5]), stoi(splitLine[6]), spriteName));
+                  SpriteDef(stoi(splitLine[1].text()), splitLine[2], stoi(splitLine[3].text()), stoi(splitLine[4].text()),
+                            stoi(splitLine[5].text()), stoi(splitLine[6].text()), spriteName));
         } else if (firstArgument == "ATTACHSPRITE") {
           currentGani->attachedSprites.push_back(
-                  AttachedSprite(stoi(splitLine[1]), stoi(splitLine[2]), stoi(splitLine[3]), stoi(splitLine[4])));
+                  AttachedSprite(stoi(splitLine[1].text()), stoi(splitLine[2].text()), stoi(splitLine[3].text()), stoi(splitLine[4].text())));
         } else if (firstArgument == "ANI") {
           isAni = true;
-          direction, layer = 0;
+          direction = layer = 0;
           continue;
 
           // If not ANI or SPRITE and isAni is false, then it is a Property
@@ -112,27 +111,27 @@ namespace GaniParsing {
 
         // 4 lines stuck together are to mean 4 directional
         // If a line is empty, a new frame starts
-        if (line.empty()) {
+        if (line.isEmpty()) {
           direction = 0;
           continue;
 
         } else if (line.find("WAIT") == 0) {
-          vector<string> splitLine = utils::split(line, ' ');
-          currentFrame.wait += stoi(splitLine[1]);
+          vector<CString> splitLine = line.tokenize(' ');
+          currentFrame.wait += stoi(splitLine[1].text());
 
         } else if (line.find("PLAYSOUND") == 0) {
-          vector<string> splitLine = utils::split(line, ' ');
+          vector<CString> splitLine = line.tokenize(' ');
           // Erase "PLAYSOUND"
           splitLine.erase(splitLine.begin());
 
           // x and y are the two last arguments
-          double y = stod(splitLine.back());
+          double y = stod(splitLine.back().text());
           splitLine.pop_back();
-          double x = stod(splitLine.back());
+          double x = stod(splitLine.back().text());
           splitLine.pop_back();
 
           // All that's left should be the filename
-          string fileName = utils::concatenateSpacedFileName(splitLine);
+          CString fileName = utils::concatenateSpacedFileName(splitLine);
 
           currentFrame.sounds.push_back(Sound(fileName, x, y));
 
@@ -140,11 +139,11 @@ namespace GaniParsing {
           AniDir *aniDir = new AniDir(static_cast<Directions>(direction));
           layer = 0;
 
-          vector<string> lineSprites = utils::split(line, ',');
-          for (string &sprite : lineSprites) {
-            vector<string> info = utils::split(sprite, ' ');
+          vector<CString> lineSprites = line.tokenize(',', true);
+          for ( const CString& sprite : lineSprites) {
+            vector<CString> info = sprite.tokenize(' ');
 
-            aniDir->aniSprites.push_back(AniSprite(stoi(info[0]), stoi(info[1]), stoi(info[2]), layer));
+            aniDir->aniSprites.push_back(AniSprite(stoi(info[0].text()), stoi(info[1].text()), stoi(info[2].text()), layer));
             layer++;
           }
 
