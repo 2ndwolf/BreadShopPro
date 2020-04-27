@@ -3,15 +3,15 @@
 #include <string>
 
 #include "src/components/ganiInformation.h"
-#include "include/utils.h"
+#include "include/stringUtils.h"
 #include "include/enums.h"
 #include "include/ganiParser.h"
 
 using namespace std;
 using namespace GaniBuilding;
 
-namespace GaniParsing {
-  cGaniInformation parse(vector<string> lines) {
+namespace Parsing {
+  cGaniInformation parseGani(vector<string> lines) {
     bool isAni = false;
     int layer, direction;
 
