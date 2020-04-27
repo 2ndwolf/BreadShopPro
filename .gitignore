@@ -3,9 +3,10 @@ assets/*
 *.bs
 *.bsp
 CMakeFiles/*
-build[s]/*
-dependencies/*
-google/*
+build*/*
+dependencies/CMakeFiles/*
 howtos/*
-.vscode
+.vs/*
 v01/*
+out/*
+\#*
