@@ -3,12 +3,12 @@
 #include <stdexcept>
 #include <string>
 
-#include "include/utils.h"
+#include "include/stringUtils.h"
 
 using namespace std;
 
 namespace utils {
-  vector<string> getGaniLines(ifstream &file) {
+  vector<string> getTextLines(ifstream &file) {
 
     vector<string> lines;
 
@@ -19,18 +19,6 @@ namespace utils {
     }
 
     return lines;
-  }
-
-  ifstream openFile(string fileName) {
-    ifstream file;
-
-    file.open(fileName);
-
-    if (file.is_open()) {
-      return file;
-    } else {
-      throw runtime_error("File could not be opened");
-    }
   }
 
   vector<string> split(const string &text, char sep) {

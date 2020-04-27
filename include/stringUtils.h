@@ -1,7 +1,7 @@
 //=================================
 // include guard
-#ifndef __utils_included__
-#define __utils_included__
+#ifndef __stringUtils_included__
+#define __stringUtils_included__
 
 //=================================
 // forward declared dependencies
@@ -22,9 +22,7 @@
 using namespace std;
 
 namespace utils {
-  vector<string> getGaniLines(ifstream &file);
-
-  ifstream openFile(string fileName);
+  vector<string> getTextLines(ifstream &file);
 
   vector<string> split(const string &text, char sep);
 
