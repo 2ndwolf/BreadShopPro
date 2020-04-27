@@ -3,8 +3,10 @@
 #ifndef _enums_h_
 #define _enums_h_
 
+#include <cstddef>
+
 namespace GaniBuilding {
-  enum Property {
+  enum Property : std::underlying_type_t<std::byte> {
     CONTINUOUS,
     LOOP,
     SINGLEDIRECTION,
