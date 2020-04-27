@@ -9,37 +9,24 @@
 
 #include "components/ganiInformation.h"
 #include "include/ganiParser.h"
-#include "include/utils.h"
+#include "include/stringUtils.h"
 #include "include/save.h"
-#include "include/test.pb.h"
+#include "include/parse.h"
+#include "include/open.h"
 
 using namespace std;
+using namespace GaniBuilding;
 
 int main() {
 
-  std::string protobufPath("bob.bsp");
-  std::string bitmapPath("Mona_Lisa_decompressed.bmp");
-  std::ifstream in(protobufPath, std::ios::binary);
+  // std::string protobufPath("bob.bsp");
+  // std::string bitmapPath("Mona_Lisa_decompressed.bmp");
+  // std::ifstream in(protobufPath, std::ios::binary);
+
+
+  cGaniInformation currentAni = Opening::open("assets/yay.gani");
+
+  // Saving::save(currentAni, "test", "serverbsp");
 
   return 0;
 }
-
-  // ifstream file = utils::openFile("assets/yay.gani");
-
-  // vector<string> lines = utils::getGaniLines(file);
-
-  // file.close();
-
-  // GaniBuilding::cGaniInformation currentAni;
-
-  // if (lines[0].find("GANI") == 0 || lines[0].find("SPRITE") == 0 ) {
-  //   currentAni = GaniParsing::parse(lines);
-  // } else {
-  //   throw runtime_error("File type not supported");
-  // }
-
-  // Saving::save(currentAni, "test", "bs");
-//   return 0;
-// }
-
-
