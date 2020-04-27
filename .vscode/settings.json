@@ -78,5 +78,19 @@
     "regex": "cpp"
   },
   "cmake.configureOnOpen": true,
-  "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools"
+  "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
+  "C_Cpp.default.compilerArgs": [],
+  "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\",
+  "C_Cpp.default.intelliSenseMode": "clang-x64",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}"],
+
+  "protoc": {
+    "path": "D:\\Dev\\protobuf\\builds",
+    "compile_on_save": false,
+    "options": [
+        "--cpp_out=./"
+    ]
+  }
+
 }

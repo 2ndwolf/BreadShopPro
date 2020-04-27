@@ -1,0 +1,9 @@
+{
+  "name": "MinGW",
+  "intelliSenseMode": "clang-x64",
+  "includePath": [
+      "${workspaceFolder}"
+  ],
+  "cStandard": "c11",
+  "cppStandard": "c++17"
+}
