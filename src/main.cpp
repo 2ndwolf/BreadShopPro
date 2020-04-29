@@ -24,9 +24,9 @@ int main() {
   // std::ifstream in(protobufPath, std::ios::binary);
 
 
-  cGaniInformation currentAni = Opening::open("assets/yay.gani");
+  GaniInformation currentAni = Opening::open("assets/yay.gani");
 
-  // Saving::save(currentAni, "test", "serverbsp");
+  Saving::save(currentAni, "test", "serverbsp");
 
   return 0;
 }

@@ -12,7 +12,7 @@ using namespace GaniBuilding;
 
 namespace Saving {
 
-  void ganiToBS(cGaniInformation aniInfo, string fileName, string as){
+  void ganiToBS(GaniInformation aniInfo, string fileName, string as){
     
     ofstream outFile(fileName + "." + as, ios::out);
 

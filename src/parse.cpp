@@ -12,9 +12,9 @@ using namespace GaniBuilding;
 
 namespace Parsing {
 
-  cGaniInformation parse(vector<string> lines){
+  GaniInformation parse(vector<string> lines){
 
-    cGaniInformation currentAni;
+    GaniInformation currentAni;
 
     if (lines[0].find("GANI") == 0 || lines[0].find("SPRITE") == 0 ) {
       currentAni = Parsing::parseGani(lines);
@@ -25,6 +25,13 @@ namespace Parsing {
     return currentAni;
   }
 
-  
+  GaniInformation parse2(ifstream file, string fileType){
+
+    GaniInformation currentAni;
+
+    // currentAni = Parsing::parseServerBSP(file);
+
+    return currentAni;
+  }
 
 }

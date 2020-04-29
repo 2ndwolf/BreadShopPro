@@ -98,7 +98,7 @@ namespace GaniBuilding {
       AttachedSprite(int pSpriteA, int pSpriteB, int pRelX, int pRelY) : spriteA(pSpriteA), spriteB(pSpriteB), relX(pRelX), relY(pRelY) {};
   };
 
-  class cGaniInformation {
+  class GaniInformation {
     public:
       std::vector<SpriteDef> spriteDefs;
       std::vector<AniFrame> aniFrames;
@@ -110,7 +110,7 @@ namespace GaniBuilding {
       std::string defaultBody;
       std::string nextGani = "none";
 
-      cGaniInformation() = default;
+      GaniInformation() = default;
   };
 }
 #endif

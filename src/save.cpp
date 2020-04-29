@@ -14,7 +14,7 @@ using namespace GaniBuilding;
 
 namespace Saving {
 
-  void save(cGaniInformation aniInfo, string fileName, string as){
+  void save(GaniInformation aniInfo, string fileName, string as){
     if(as == "bs"){
       ganiToBS(aniInfo, fileName, as);
     } else if(as == "serverbsp"){

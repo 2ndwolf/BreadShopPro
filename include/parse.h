@@ -7,6 +7,8 @@
 
 namespace Parsing {
 
-  GaniBuilding::cGaniInformation parse(std::vector<std::string> lines);
+  GaniBuilding::GaniInformation parse(std::vector<std::string> lines);
+
+  GaniBuilding::GaniInformation parse2(ifstream file, string fileType);
 
 }

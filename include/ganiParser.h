@@ -11,7 +11,7 @@
 
 
 namespace Parsing {
-  GaniBuilding::cGaniInformation parseGani(std::vector<std::string> lines);
+  GaniBuilding::GaniInformation parseGani(std::vector<std::string> lines);
 }
 
 #endif

@@ -18,9 +18,9 @@ using namespace GaniBuilding;
 
 namespace Opening {
 
-  cGaniInformation open(string fileName){
+  GaniInformation open(string fileName){
     ifstream file;
-    cGaniInformation ganiInfo;
+    GaniInformation ganiInfo;
     vector<string> splitFileName = utils::split(fileName, '.');
 
     string fileExtension;
@@ -38,7 +38,7 @@ namespace Opening {
         vector<string> lines = utils::getTextLines(file);
         ganiInfo = Parsing::parse(lines);
       } else if(fileExtension == "serverbsp"){
-
+        ganiInfo = Parsing::parse2(file, fileExtension);
       }
 
       file.close();

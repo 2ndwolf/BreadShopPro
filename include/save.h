@@ -10,7 +10,7 @@
 
 namespace Saving {
 
-  void save(GaniBuilding::cGaniInformation aniInfo, std::string fileName, std::string as);
+  void save(GaniBuilding::GaniInformation aniInfo, std::string fileName, std::string as);
 
 }
 #endif

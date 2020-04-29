@@ -11,11 +11,11 @@ using namespace std;
 using namespace GaniBuilding;
 
 namespace Parsing {
-  cGaniInformation parseGani(vector<string> lines) {
+  GaniInformation parseGani(vector<string> lines) {
     bool isAni = false;
     int layer, direction;
 
-    cGaniInformation *currentGani = new cGaniInformation();
+    GaniInformation *currentGani = new GaniInformation();
 
     for (string &line : lines) {
       // line.erase(remove(line.begin(), line.end(), '\n'), line.end());

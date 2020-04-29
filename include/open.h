@@ -11,6 +11,6 @@ using namespace GaniBuilding;
 
 namespace Opening {
 
-  cGaniInformation open(string fileName);
+  GaniInformation open(string fileName);
 
 }
