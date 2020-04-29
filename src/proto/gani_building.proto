@@ -1,0 +1,94 @@
+syntax = "proto2";
+
+message gani_building {
+
+  enum property {
+    CONTINUOUS = 0;
+    LOOP = 1;
+    SINGLEDIRECTION = 2;
+
+  }
+
+  enum default_image_type {
+    NOTDEFAULT = 0;
+    SPRITES = 1;
+    SHIELD = 2;
+    HEAD = 3;
+    BODY = 4;
+    SWORD = 5;
+    HORSE = 6;
+    PARAM1 = 7;
+    ATTR1 = 8;
+    PARAM2 = 9;
+    ATTR2 = 10;
+    PARAM3 = 11;
+
+  }
+
+  enum directions {
+    UP = 0;
+    LEFT = 1;
+    DOWN = 2;
+
+  }
+
+  message sprite_def {
+      optional uint32 index = 1;
+      optional string image = 2;
+      optional int32 off_x = 3;
+      optional int32 off_y = 4;
+      optional int32 width = 5;
+      optional int32 height = 6;
+      optional string name = 7;
+      optional default_image_type default_image = 8;
+
+  }
+
+  message sound {
+      optional string file_name = 1;
+      optional sint32 x = 2;
+      optional sint32 y = 3;
+
+  }
+
+  message ani_sprite {
+      optional uint32 sprite_index = 1;
+      optional sint32 x = 2;
+      optional sint32 y = 3;
+      optional int32 layer = 4;
+
+  }
+
+  message ani_dir {
+      optional directions direction = 1;
+      repeated ani_sprite ani_sprites = 2;
+
+  }
+
+  message ani_frame {
+      repeated ani_dir ani_dirs = 1;
+      optional int32 wait = 2;
+      repeated sound sounds = 3;
+
+  }
+
+  message attached_sprite {
+      optional uint32 sprite_a = 1;
+      optional uint32 sprite_b = 2;
+      optional sint32 rel_x = 3;
+      optional sint32 rel_y = 4;
+
+  }
+
+  message gani_information {
+      repeated sprite_def sprite_defs = 1;
+      repeated ani_frame ani_frames = 2;
+      repeated property properties = 3;
+      repeated attached_sprite attached_sprites = 4;
+      repeated string default_attributes = 5;
+      repeated string default_parameters = 6;
+      optional string default_head = 7;
+      optional string default_body = 8;
+      optional string next_gani = 9;
+      }
+}
