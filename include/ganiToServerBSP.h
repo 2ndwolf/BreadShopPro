@@ -11,7 +11,9 @@
 
 namespace Saving {
   void ganiToServerBSP(GaniBuilding::GaniInformation object, std::string fileName, std::string as);
+}
 
+namespace ganiToServerBSP{
   void populate_SpriteDef(GaniBuilding::SpriteDef object, gani_building_sprite_def* pointer);
 
   void populate_Sound(GaniBuilding::Sound object, gani_building_sound* pointer);
