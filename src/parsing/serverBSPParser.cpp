@@ -8,7 +8,7 @@
 #include <google/protobuf/io/gzip_stream.h>
 
 #include "src/proto/gani_building.pb.h"
-#include "src/components/ganiInformation.h"
+#include "include/components/ganiInformation.h"
 #include "include/serverBSPParser.h"
 
 using namespace std;

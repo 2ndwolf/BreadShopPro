@@ -6,7 +6,7 @@
 #include <string>
 #include <vector>
 
-#include "src/components/ganiInformation.h"
+#include "include/components/ganiInformation.h"
 #include "src/proto/gani_building.pb.h"
 
 namespace Saving {

@@ -7,7 +7,7 @@
 #include <cctype>
 
 
-#include "components/ganiInformation.h"
+#include "include/components/ganiInformation.h"
 #include "include/stringUtils.h"
 #include "include/parse.h"
 // #include "../include/ganiOpener.h"

@@ -11,7 +11,7 @@
 #include <dependencies/SDL2/SDL_image.h> 
 #include <dependencies/SDL2/SDL_timer.h>
 
-#include "components/ganiInformation.h"
+#include "include/components/ganiInformation.h"
 #include "include/ganiParser.h"
 #include "include/stringUtils.h"
 #include "include/save.h"

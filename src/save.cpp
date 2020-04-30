@@ -4,7 +4,7 @@
 #include <cstring>
 #include <string>
 
-#include "components/ganiInformation.h"
+#include "include/components/ganiInformation.h"
 #include "include/ganiToBS.h"
 #include "include/ganiToServerBSP.h"
 #include "include/save.h"

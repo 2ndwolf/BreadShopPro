@@ -4,7 +4,7 @@
 #include <cstring>
 #include <string>
 
-#include "src/components/ganiInformation.h"
+#include "include/components/ganiInformation.h"
 // #include "save.h"
 
 using namespace std;

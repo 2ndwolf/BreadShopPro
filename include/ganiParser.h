@@ -7,7 +7,7 @@
 #include <string>
 #include <stdexcept>
 
-#include "src/components/ganiInformation.h"
+#include "include/components/ganiInformation.h"
 
 
 namespace Parsing {
