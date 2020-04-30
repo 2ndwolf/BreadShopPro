@@ -15,6 +15,8 @@ namespace Saving {
     gani_building_gani_information *pointer = new gani_building_gani_information;
     ganiToServerBSP::populate_GaniInformation(object, pointer);
 
+    std::cout << pointer->default_head();
+
      auto uncompressedBytes = (*pointer).ByteSizeLong();
      std::cout << uncompressedBytes << std::endl;
 

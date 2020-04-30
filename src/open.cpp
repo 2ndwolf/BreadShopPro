@@ -5,7 +5,6 @@
 #include <string>
 #include <algorithm>
 #include <cctype>
-#include <locale>         // std::locale, std::tolower
 
 
 #include "components/ganiInformation.h"
@@ -38,7 +37,7 @@ namespace Opening {
         vector<string> lines = utils::getTextLines(file);
         ganiInfo = Parsing::parse(lines);
       } else if(fileExtension == "serverbsp"){
-        ganiInfo = Parsing::parse2(file, fileExtension);
+        ganiInfo = Parsing::parse(file, fileExtension);
       }
 
       file.close();

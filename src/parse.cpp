@@ -5,14 +5,16 @@
 #include <string>
 
 #include "components/ganiInformation.h"
+#include "include/parse.h"
 #include "include/ganiParser.h"
+#include "include/serverBSPParser.h"
 
 using namespace std;
 using namespace GaniBuilding;
 
 namespace Parsing {
 
-  GaniInformation parse(vector<string> lines){
+  GaniInformation parse(vector<std::string> lines){
 
     GaniInformation currentAni;
 
@@ -25,11 +27,11 @@ namespace Parsing {
     return currentAni;
   }
 
-  GaniInformation parse2(ifstream file, string fileType){
+  GaniBuilding::GaniInformation parse(std::ifstream &file, std::string fileType){
 
     GaniInformation currentAni;
 
-    // currentAni = Parsing::parseServerBSP(file);
+    currentAni = Parsing::parseServerBSP(file);
 
     return currentAni;
   }
