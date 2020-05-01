@@ -45,5 +45,11 @@ namespace Enumerators {
     BSP, //Encrypted BS file with bundled images
     SBSP //BSP file without images
   };
+
+  enum WaitState{
+    WAIT,
+    DONE,
+    STANDBY
+  };
 }
 #endif
