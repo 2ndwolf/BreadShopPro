@@ -5,6 +5,9 @@
 
 #include <map>
 
+#include "include/enums.h"
+
+
 namespace GameObjectComponent {
 
   class Position{
@@ -24,6 +27,12 @@ namespace GameObjectComponent {
     static std::map<int, int> keycodeStates;
   };
 
+  class Mouse{
+    public:
+    static int x, y;
+    static std::map<int, int> clicks;
+    static MouseMode mouseMode;
+  };
 }
 
 #endif

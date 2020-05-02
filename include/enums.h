@@ -6,7 +6,7 @@
 #include <cstddef>
 
 namespace GaniBuilding {
-  enum Property : std::underlying_type_t<std::byte> {
+  enum Property {
     CONTINUOUS,
     LOOP,
     SINGLEDIRECTION,
@@ -52,4 +52,9 @@ namespace Enumerators {
     STANDBY
   };
 }
+
+  enum MouseMode{
+    DEFAULT
+  };
+
 #endif

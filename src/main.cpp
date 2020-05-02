@@ -20,12 +20,14 @@
 
 #include "include/pollEvents.h"
 #include "include/updateSquare.h"
-#include "include/keyActions.h"
+
+#include "include/mouseActions.h"
+
 
 using namespace std;
 using namespace RenderComponent;
 
-std::map<int, int> GameObjectComponent::KeyStates::keycodeStates;
+
 
 int main() {
 
@@ -33,20 +35,17 @@ int main() {
 
     std::string fileName = "assets/gen_specialchest.gif";
 
-    PbRender::createRenderable(fileName, 10, 10, 10, 10);
-    PbRender::createRenderable(fileName, 20, 20, 10, 10);
+    PbRender::createRenderable(fileName);
 
     Window::close = 0;
-    GameObjectComponent::KeyStates::keycodeStates.insert({0,0});
 
-    // // annimation loop 
     while (!Window::close) { 
 
-    //     // Events mangement 
-        Input::updateKeyStates();
+        // Events mangement 
+
         Window::close = Events::pollEvents();
         Input::updateSquare();
-  
+        Input::updateMouse();
         Rendering::loopRender();
 
     } 

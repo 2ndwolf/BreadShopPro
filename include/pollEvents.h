@@ -7,6 +7,7 @@
 namespace Events {
 
   int pollEvents();
+  void updateInputStates(std::map<int, int> inputStates);
 
 }
 #endif
