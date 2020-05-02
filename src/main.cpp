@@ -9,18 +9,6 @@
 
 #define SDL_MAIN_HANDLED
 
-#include <dependencies/SDL2/SDL.h> 
-#include <dependencies/SDL2/SDL_image.h> 
-#include <dependencies/SDL2/SDL_timer.h>
-
-#include "include/components/ganiInformation.h"
-#include "include/ganiParser.h"
-#include "include/stringUtils.h"
-#include "include/save.h"
-#include "include/parse.h"
-#include "include/open.h"
-#include "include/constants.h"
-
 #include "include/initRender.h"
 #include "include/killRender.h"
 #include "include/loopRender.h"
@@ -28,29 +16,36 @@
 #include "include/renderables.h"
 
 #include "include/components/renderComponent.h"
+#include "include/components/gameObject.h"
 
-#include "include/mouseInput.h"
+#include "include/pollEvents.h"
+#include "include/updateSquare.h"
+#include "include/keyActions.h"
 
 using namespace std;
-using namespace GaniBuilding;
 using namespace RenderComponent;
+
+std::map<int, int> GameObjectComponent::KeyStates::keycodeStates;
 
 int main() {
 
     Rendering::initRender();
 
     std::string fileName = "assets/gen_specialchest.gif";
-    std::cout << "BOBOBOBOBOB";
 
-    PbRender::createBlittedRenderable(fileName, fileName, 10, 10, 10, 10);
+    PbRender::createRenderable(fileName, 10, 10, 10, 10);
+    PbRender::createRenderable(fileName, 20, 20, 10, 10);
 
     Window::close = 0;
+    GameObjectComponent::KeyStates::keycodeStates.insert({0,0});
 
     // // annimation loop 
     while (!Window::close) { 
 
     //     // Events mangement 
-        Window::close = Input::mouseInput();
+        Input::updateKeyStates();
+        Window::close = Events::pollEvents();
+        Input::updateSquare();
   
         Rendering::loopRender();
 

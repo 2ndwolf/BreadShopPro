@@ -3,6 +3,8 @@
 #ifndef _gameObjectComponent_h_
 #define _gameObjectComponent_h_
 
+#include <map>
+
 namespace GameObjectComponent {
 
   class Position{
@@ -17,7 +19,11 @@ namespace GameObjectComponent {
     int dir;
   };
 
-  
+  class KeyStates{
+    public:
+    static std::map<int, int> keycodeStates;
+  };
+
 }
 
 #endif
