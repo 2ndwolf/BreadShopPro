@@ -12,7 +12,8 @@ using namespace RenderComponent;
 int Window::close;
 SDL_Window *Render::sdlWindow;
 SDL_Renderer *Render::sdlRenderer;
-
+std::vector<Renderable*> RenderableList::renderables;
+std::map<std::string, SDL_Surface*> SurfaceList::surfaces;
 
 
 namespace Rendering {

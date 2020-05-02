@@ -9,10 +9,8 @@
 
 namespace PbRender{
 
-  RenderComponent::Renderable createRenderable(std::string &fileName);
-
-  RenderComponent::Renderable createBlittedRenderable(std::string &fileName, std::string &blitName, int offX, int offY, int width, int height);
-
+  RenderComponent::Renderable createRenderable(std::string &fileName, int offX = 0, int offY = 0, int width = 0, int height = 0);
+  
 }
 
 #endif
