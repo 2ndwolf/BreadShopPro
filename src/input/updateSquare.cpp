@@ -17,7 +17,6 @@ namespace Input{
     std::map<int, int>::iterator it = KeyStates::keycodeStates.begin();
 
     while (it != KeyStates::keycodeStates.end()){
-      std::cout << it->second;
       if(it->first == SDL_SCANCODE_UP && it->second == 1){
         RenderableList::renderables[0]->sdlRect.y -= 300 / 30;
       }
