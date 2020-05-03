@@ -17,43 +17,58 @@
 
 #include "include/components/renderComponent.h"
 #include "include/components/gameObject.h"
+#include "include/components/ganiInformation.h"
 
 #include "include/pollEvents.h"
 #include "include/updateSquare.h"
 
 #include "include/mouseActions.h"
 
+#include "include/open.h"
+#include "include/save.h"
+
+#include "dependencies/entt/entity/registry.hpp"
+
+#include "include/fileManagement.h"
+#include "include/ganiEntity.h"
+#include "include/initKeyBinds.h"
 
 using namespace std;
 using namespace RenderComponent;
 
 
-
 int main() {
 
-    Rendering::initRender();
+  //   GaniBuilding::GaniInformation currentAni = Opening::open("assets/yay.gani");
 
-    std::string fileName = "assets/gen_specialchest.gif";
+  // Saving::save(currentAni, "test", "bs");
+  entt::registry registry;
+  std::uint64_t dt = 16;
 
-    PbRender::createRenderable(fileName);
+  Rendering::initRender();
+  Input::initKeyBinds();
 
-    Window::close = 0;
+  // Entities::createFileManagement(registry);
+  // Entities::createGaniEntity(registry);
 
-    while (!Window::close) { 
+  std::string fileName = "assets/gen_specialchest.gif";
+  PbRender::createRenderable(fileName);
 
-        // Events mangement 
+  Window::close = 0;
 
-        Window::close = Events::pollEvents();
-        Input::updateSquare();
-        Input::updateMouse();
-        Rendering::loopRender();
+  while (!Window::close) { 
 
-    } 
-  
-    Rendering::killRender();
+    Window::close = Events::pollEvents();
+    Input::updateSquare();
+    Input::updateMouse();
+    Rendering::loopRender();
 
-    return 0; 
-  }
+  } 
+
+  Rendering::killRender();
+
+  return 0; 
+}
 
 
 

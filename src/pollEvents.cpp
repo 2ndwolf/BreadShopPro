@@ -76,8 +76,6 @@ namespace Events {
         Mouse::x = event.motion.x;
         Mouse::y = event.motion.y;
         break;
-
-      //SDL_MOUSEMOTION
       }
     }
 
@@ -86,7 +84,7 @@ namespace Events {
     return 0;
   }
 
-  void updateInputStates(std::map<int, int> inputStates){
+  void updateInputStates(std::map<int, int> &inputStates){
     std::map<int, int>::iterator it = inputStates.begin();
     while (it != inputStates.end()){
 
@@ -103,22 +101,3 @@ namespace Events {
     }
   }
 }
-
-//  { 
-//           case SDL_SCANCODE_W: 
-//           case SDL_SCANCODE_UP: 
-//             RenderableList::renderables[0]->sdlRect.y -= 300 / 30; 
-//             break; 
-//           case SDL_SCANCODE_A: 
-//           case SDL_SCANCODE_LEFT: 
-//             RenderableList::renderables[0]->sdlRect.x -= 300 / 30; 
-//             break; 
-//           case SDL_SCANCODE_S: 
-//           case SDL_SCANCODE_DOWN: 
-//             RenderableList::renderables[0]->sdlRect.y += 300 / 30; 
-//             break; 
-//           case SDL_SCANCODE_D: 
-//           case SDL_SCANCODE_RIGHT: 
-//             RenderableList::renderables[0]->sdlRect.x += 300 / 30; 
-//             break; 
-//         } 

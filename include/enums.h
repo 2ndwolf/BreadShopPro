@@ -3,8 +3,6 @@
 #ifndef _enums_h_
 #define _enums_h_
 
-#include <cstddef>
-
 namespace GaniBuilding {
   enum Property {
     CONTINUOUS,
@@ -55,6 +53,18 @@ namespace Enumerators {
 
   enum MouseMode{
     DEFAULT
+  };
+
+  enum FileAction{
+    SAVE,
+    OPEN
+  };
+
+  enum ReadingOrder{
+    LEFTTORIGHT,
+    RIGHTTOLEFT,
+    TOPTOBOTTOM,
+    BOTTOMTOTOP
   };
 
 #endif
