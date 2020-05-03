@@ -6,22 +6,12 @@
 #include <map>
 
 #include "include/enums.h"
+#include "include/components/basics.h"
 
 
 namespace GameObjectComponent {
 
-  class Position{
-    int x, y, screenX, screenY;
-  };
-
-  class Bounds{
-    int width, height;
-  };
-
-  class Direction{
-    int dir;
-  };
-
+  // Single component services as classes
   class KeyStates{
     public:
     static std::map<int, int> keycodeStates;
@@ -33,6 +23,16 @@ namespace GameObjectComponent {
     static std::map<int, int> clicks;
     static MouseMode mouseMode;
   };
+
+  // Realistic components
+  struct Bounds{
+    Size size;
+  };
+
+  struct Direction{
+    int dir;
+  };
+  
 }
 
 #endif

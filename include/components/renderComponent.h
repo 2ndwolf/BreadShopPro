@@ -22,11 +22,6 @@ namespace RenderComponent {
     static SDL_Renderer* sdlRenderer;
   };
 
-  // class Surface{
-  //   public:
-  //   SDL_Surface* sdlSurface;
-  // };
-
   class Renderable{
     public:
     SDL_Texture* sdlTexture;
@@ -35,6 +30,7 @@ namespace RenderComponent {
     int layer;
     bool hidden;
   };
+
 
   class RenderableList{
     public:
@@ -45,6 +41,13 @@ namespace RenderComponent {
     public:
     static std::map<std::string, SDL_Surface*> surfaces;
   };
+
+
+  // Realistic components
+  struct EntityRenderables{
+    std::vector<Renderable*> renderables;
+  };
+
 }
 
 #endif

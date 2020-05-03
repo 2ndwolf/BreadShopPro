@@ -6,6 +6,10 @@
 #include <map>
 #include <string>
 
+
+
+
+
 struct Size{
   int width, height;
 };
@@ -18,6 +22,6 @@ struct Velocity{
   double dx, dy;
 };
 
-// typedef std::map<std::string, std::string> Name_File;
+
 
 #endif

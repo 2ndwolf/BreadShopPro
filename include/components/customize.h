@@ -15,12 +15,13 @@ namespace CustomizeComponent {
     public:
     std::map<std::string, std::string> images;
   };
-  
+
   struct Custom{
     ImageList playerCharacter;
     ImageList gui;
     ImageList hud;
     ImageList world;
+    int priority = 1;
   };
 
 
