@@ -2,15 +2,17 @@
 
 #include <dependencies/SDL2/SDL.h> 
 
-#include "include/constants.h"
-#include "include/initRender.h"
-#include "include/mouseActions.h"
-#include "include/components/renderComponent.h"
+#include "components/renderComponent.h"
+#include "components/gameObject.h"
 
-#include "include/pollEvents.h"
+#include "constants.h"
+#include "enums.h"
+#include "rendering.h"
 
+#include "input.h"
 
 using namespace RenderComponent;
+using namespace GameObjectComponent;
 
 int Mouse::x;
 int Mouse::y;
@@ -18,7 +20,7 @@ std::map<int, int> Mouse::clicks;
 MouseMode Mouse::mouseMode = MouseMode::DEFAULT;
 std::map<int, int> GameObjectComponent::KeyStates::keycodeStates;
 
-namespace Events {
+namespace Input {
 
   int pollEvents () {
     SDL_Event event;
