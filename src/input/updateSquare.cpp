@@ -5,10 +5,13 @@
 
 #include "dependencies/SDL2/SDL_scancode.h"
 
-#include "include/constants.h"
-#include "include/components/gameObject.h"
-#include "include/components/renderComponent.h"
-#include "include/components/customize.h"
+#include "components/gameObject.h"
+#include "components/renderComponent.h"
+#include "components/customize.h"
+
+#include "constants.h"
+
+#include "input.h"
 
 using namespace RenderComponent;
 using namespace GameObjectComponent;

@@ -1,7 +1,7 @@
 //=================================
 // include guard
-#ifndef _renderables_h_
-#define _renderables_h_
+#ifndef _pbRender_h_
+#define _pbRender_h_
 
 #include <string>
 

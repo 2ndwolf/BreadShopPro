@@ -5,11 +5,13 @@
 #include <string>
 
 #include <google/protobuf/io/zero_copy_stream_impl.h>
-// #include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 #include <google/protobuf/io/gzip_stream.h>
+// #include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 
-#include "include/components/ganiInformation.h"
 #include "src/proto/test.pb.h"
+
+#include "components/ganiInformation.h"
+
 // #include "save.h"
 
 using namespace std;

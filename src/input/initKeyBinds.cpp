@@ -4,8 +4,9 @@
 
 #include "dependencies/SDL2/SDL_scancode.h"
 
-#include "include/components/customize.h"
+#include "components/customize.h"
 
+#include "input.h"
 
 using namespace CustomizeComponent;
 

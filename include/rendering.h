@@ -1,12 +1,18 @@
 //=================================
 // include guard
-#ifndef _initRender_h_
-#define _initRender_h_
+#ifndef _rendering_h_
+#define _rendering_h_
 
 
 namespace Rendering {
 
   void initRender();
+
+  void killRender();
+
+  void loopRender();
+
+
 
 }
 

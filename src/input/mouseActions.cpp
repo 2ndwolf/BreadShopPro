@@ -3,11 +3,13 @@
 
 #include <dependencies/SDL2/SDL.h> 
 
-#include "include/enums.h"
-#include "include/constants.h"
-#include "include/components/gameObject.h"
-#include "include/components/renderComponent.h"
-#include "include/mouseActions.h"
+#include "components/renderComponent.h"
+#include "components/gameObject.h"
+
+#include "enums.h"
+#include "constants.h"
+
+#include "input.h"
 
 using namespace GameObjectComponent;
 using namespace RenderComponent;

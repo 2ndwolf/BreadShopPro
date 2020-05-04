@@ -3,10 +3,11 @@
 
 #include <dependencies/SDL2/SDL_image.h> 
 
-#include "include/constants.h"
-#include "include/components/renderComponent.h"
+#include "components/renderComponent.h"
 
-#include "include/renderables.h"
+#include "constants.h"
+
+#include "pbrender.h"
 
 using namespace RenderComponent;
 

@@ -1,8 +1,10 @@
 #include <dependencies/SDL2/SDL.h> 
 
-#include "include/constants.h"
-#include "include/components/renderComponent.h"
-#include "include/initRender.h"
+#include "components/renderComponent.h"
+
+#include "constants.h"
+
+#include "rendering.h"
 
 using namespace RenderComponent;
 

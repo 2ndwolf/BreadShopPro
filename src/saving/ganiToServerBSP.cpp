@@ -6,9 +6,11 @@
 #include <google/protobuf/io/zero_copy_stream_impl.h>
 #include <google/protobuf/io/gzip_stream.h>
 
-#include "include/components/ganiInformation.h"
-#include "include/ganiToServerBSP.h"
+#include "components/ganiInformation.h"
+
 #include "src/proto/gani_building.pb.h"
+
+#include "saving.h"
 
 namespace Saving {
   void ganiToServerBSP(GaniBuilding::GaniInformation object, std::string fileName, std::string as){

@@ -7,9 +7,11 @@
 #include <cctype>
 
 
-#include "include/components/ganiInformation.h"
-#include "include/stringUtils.h"
-#include "include/parse.h"
+#include "components/ganiInformation.h"
+
+#include "utils.h"
+#include "parsing.h"
+#include "opening.h"
 // #include "../include/ganiOpener.h"
 
 using namespace std;

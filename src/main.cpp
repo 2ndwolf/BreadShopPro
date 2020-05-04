@@ -9,33 +9,30 @@
 
 #define SDL_MAIN_HANDLED
 
-#include "include/initRender.h"
-#include "include/killRender.h"
-#include "include/loopRender.h"
-
-#include "include/renderables.h"
-
-#include "include/components/renderComponent.h"
-#include "include/components/gameObject.h"
-#include "include/components/ganiInformation.h"
-
-#include "include/pollEvents.h"
-#include "include/updateSquare.h"
-
-#include "include/mouseActions.h"
-
-#include "include/open.h"
-#include "include/save.h"
-
 #include "dependencies/entt/entity/registry.hpp"
 
-#include "include/fileManagement.h"
-#include "include/ganiEntity.h"
-#include "include/initKeyBinds.h"
+#include "components/gameObject.h"
+#include "components/ganiInformation.h"
+#include "components/renderComponent.h"
+#include "components/fileManagementComponent.h"
+
+#include "input.h"
+#include "saving.h"
+#include "opening.h"
+#include "pbrender.h"
+#include "rendering.h"
+#include "archetype.h"
+
+
+
+
 
 using namespace std;
 using namespace RenderComponent;
+using namespace FileManagementComponent;
 
+std::string FileInfo::name;
+std::string FileInfo::path;
 
 int main() {
 
@@ -51,6 +48,9 @@ int main() {
   // Entities::createFileManagement(registry);
   // Entities::createGaniEntity(registry);
 
+  FileInfo::path = "assets/";
+  FileInfo::name = "yay.gani";
+
   std::string fileName = "assets/gen_specialchest.gif";
   PbRender::createRenderable(fileName);
 
@@ -58,7 +58,7 @@ int main() {
 
   while (!Window::close) { 
 
-    Window::close = Events::pollEvents();
+    Window::close = Input::pollEvents();
     Input::updateSquare();
     Input::updateMouse();
     Rendering::loopRender();

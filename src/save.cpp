@@ -4,10 +4,9 @@
 #include <cstring>
 #include <string>
 
-#include "include/components/ganiInformation.h"
-#include "include/ganiToBS.h"
-#include "include/ganiToServerBSP.h"
-#include "include/save.h"
+#include "components/ganiInformation.h"
+
+#include "saving.h"
 
 using namespace std;
 using namespace GaniBuilding;

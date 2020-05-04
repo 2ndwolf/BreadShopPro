@@ -3,7 +3,7 @@
 #include <stdexcept>
 #include <string>
 
-#include "include/stringUtils.h"
+#include "utils.h"
 
 using namespace std;
 

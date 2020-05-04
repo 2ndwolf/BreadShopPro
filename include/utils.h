@@ -1,7 +1,7 @@
 //=================================
 // include guard
-#ifndef __stringUtils_included__
-#define __stringUtils_included__
+#ifndef _utils_h_
+#define _utils_h_
 
 //=================================
 // forward declared dependencies

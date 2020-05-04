@@ -4,17 +4,16 @@
 #include <cstring>
 #include <string>
 
-#include "include/components/ganiInformation.h"
-#include "include/parse.h"
-#include "include/ganiParser.h"
-#include "include/serverBSPParser.h"
+#include "components/ganiInformation.h"
+
+#include "parsing.h"
 
 using namespace std;
 using namespace GaniBuilding;
 
 namespace Parsing {
 
-  GaniInformation parse(vector<std::string> lines){
+  GaniInformation parse(std::vector<std::string> lines){
 
     GaniInformation currentAni;
 

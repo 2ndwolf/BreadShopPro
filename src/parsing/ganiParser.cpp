@@ -2,10 +2,12 @@
 #include <vector>
 #include <string>
 
-#include "include/components/ganiInformation.h"
-#include "include/stringUtils.h"
-#include "include/enums.h"
-#include "include/ganiParser.h"
+#include "components/ganiInformation.h"
+
+#include "utils.h"
+#include "enums.h"
+
+#include "parsing.h"
 
 using namespace std;
 using namespace GaniBuilding;
