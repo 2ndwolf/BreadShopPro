@@ -2,7 +2,7 @@
 
 
 
-namespace Systems{
+namespace System{
 
 
   // void update(entt::registry &registry) {
